@@ -42,6 +42,7 @@ ros::Publisher pubMarker ;
 visualization_msgs::Marker marker;
 geometry_msgs::Point currentLeaderPosition;
 std_msgs::Float64 currentLeaderSpeed;
+double r_, g_, b_;
 
 // utilitary functions
 
@@ -63,9 +64,9 @@ void initializeMarker(){
     marker.scale.x = 0.1;
     marker.scale.y = 0.1;
     marker.scale.z = 0.1;
-    marker.color.r = 0.0f;
-    marker.color.g = 0.0f;
-    marker.color.b = 1.0f;
+    marker.color.r = r_;
+    marker.color.g = g_;
+    marker.color.b = b_;
     marker.color.a = 1.0;
 }
 
@@ -106,6 +107,10 @@ int main (int argc, char** argv)
     double init_pos_y;
     nh_loc.param("init_pos_x", init_pos_x, 0.0);
     nh_loc.param("init_pos_y", init_pos_y, 0.0);
+
+    nh_loc.param("red", r_, 0.0);
+    nh_loc.param("green", g_, 1.0);
+    nh_loc.param("blue", b_, 0.0);
 
     // Declare your node's subscriptions and service clients
     // ...
