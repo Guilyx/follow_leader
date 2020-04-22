@@ -14,8 +14,13 @@
     <node pkg="follow_leader" type="follower" name="reptincel">
         <remap from="leader_pos" to="dracaufeu/leader_pos"/>
         <remap from="leader_speed" to="dracaufeu/leader_speed"/>
+
         <param name="init_pos_x" type="double" value="18.0"/>
         <param name="init_pos_y" type="double" value="10.0"/>
+
+        <param name="red" type="double" value="1.0"/>
+        <param name="green" type="double" value="0.8"/>
+        <param name="blue" type="double" value="0.0"/>
     </node>
 
     <!-- The puppy -->
@@ -24,6 +29,10 @@
         <remap from="leader_speed" to="reptincel/follower_speed"/>
         <param name="init_pos_x" type="double" value="-18.0"/>
         <param name="init_pos_y" type="double" value="-9.0"/>
+
+        <param name="red" type="double" value="0.5"/>
+        <param name="green" type="double" value="0.0"/>
+        <param name="blue" type="double" value="0.5"/>
     </node>
 
 </launch>
