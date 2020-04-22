@@ -89,8 +89,8 @@ int main (int argc, char** argv)
 
     // Declare you publishers and service servers
     pubMarker = nh_glob.advertise<visualization_msgs::Marker>("/visualization_marker",1) ;
-    ros::Publisher pubPos = nh_glob.advertise<geometry_msgs::Point>("leader_pos", 1);
-    ros::Publisher pubSpeed = nh_glob.advertise<std_msgs::Float64>("leader_speed", 1);
+    ros::Publisher pubPos = nh_loc.advertise<geometry_msgs::Point>("leader_pos", 1);
+    ros::Publisher pubSpeed = nh_loc.advertise<std_msgs::Float64>("leader_speed", 1);
 
     std_msgs::Float64 speedMsg;
     geometry_msgs::Point leaderPosition ;
