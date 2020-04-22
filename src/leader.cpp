@@ -65,11 +65,18 @@ void publishMarkerAt( geometry_msgs::Point markerPos) {
 
 double speed ;
 void kbdCallback( std_msgs::Int16 key_msg ) {
+    ROS_INFO("key typed: %d", key_msg.data);
     if( key_msg.data == 43 ){ 
-        if( speed < 2.0 ) speed += 0.1 ;    
+        if( speed < 5.0 ) speed += 0.1 ; 
+        ROS_INFO("speed: %.2f", speed);   
     }
-    if( key_msg.data == 45 ){
+    else if( key_msg.data == 45 ){
         if( speed > 0.5 ) speed -= 0.1 ;
+        ROS_INFO("speed: %.2f", speed);
+    }
+    else if (key_msg.data == 32) {
+        speed = -speed;
+        ROS_INFO("revert engines");
     }
 }
 

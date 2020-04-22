@@ -147,7 +147,7 @@ int main (int argc, char** argv)
         prevTime = currentTime ;
 
         // Get speed
-        speed = currentLeaderSpeed.data;
+        speed = abs(currentLeaderSpeed.data);
         speed_msg.data = speed;
 
         // Direction of motion
