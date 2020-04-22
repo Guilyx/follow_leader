@@ -8,7 +8,7 @@
 <br />
 <p align="center">
     <!--- relative path means image/image.png instead of https://etc... -->
-    <img src="img/follow_leader.gif" alt="Logo" width="468" height="463">                           
+    <img src="img/follow_leader.gif" alt="Logo" width="700" height="463">                           
 </a>
 
   <h3 align="center">Follow Leader ROS Package</h3>
