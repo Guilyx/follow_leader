@@ -1,0 +1,29 @@
+<launch>
+
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find follow_leader)/config.rviz"></node>
+
+    <!-- The ever-useful infamous capture_key node -->
+    <node pkg="follow_leader" type="capture_key" name="ck">
+    </node>
+    
+    <!-- The master -->
+    <node pkg="follow_leader" type="leader" name="dracaufeu">
+    </node>
+
+    <!-- The dog -->
+    <node pkg="follow_leader" type="follower" name="reptincel">
+        <remap from="leader_pos" to="dracaufeu/leader_pos"/>
+        <remap from="leader_speed" to="dracaufeu/leader_speed"/>
+        <param name="init_pos_x" type="double" value="18.0"/>
+        <param name="init_pos_y" type="double" value="10.0"/>
+    </node>
+
+    <!-- The puppy -->
+    <node pkg="follow_leader" type="follower" name="salameche">
+        <remap from="leader_pos" to="reptincel/follower_pos"/>
+        <remap from="leader_speed" to="reptincel/follower_speed"/>
+        <param name="init_pos_x" type="double" value="-18.0"/>
+        <param name="init_pos_y" type="double" value="-9.0"/>
+    </node>
+
+</launch>
