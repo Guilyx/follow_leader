@@ -16,14 +16,14 @@
   <p align="center">
     A ROS package for basic leader following, chasing the leader position at constant leader speed.
     <br />
-    <a href="https://github.com/guilyx/follow_leader/readme.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/master-coro/follow_leader/readme.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/guilyx/follow_leader">View Demo</a>
+    <a href="https://github.com/master-coro/follow_leader">View Demo</a>
     ·
-    <a href="https://github.com/guilyx/follow_leader/issues">Report Bug</a>
+    <a href="https://github.com/master-coro/follow_leader/issues">Report Bug</a>
     ·
-    <a href="https://github.com/guilyx/follow_leader/issues">Request Feature</a>
+    <a href="https://github.com/master-coro/follow_leader/issues">Request Feature</a>
   </p>
 </p>
 
@@ -59,12 +59,24 @@
 ## Setup
 
 1. (Optional) Click on `Fork`
-2. Clone the project on your local machine : `git clone https://github.com/guilyx/follow_leader.git`
-3. Install dependencies : `insert line to meet dependencies`
+2. Clone the project on your local machine.
+```shell
+$ cd ~/catkin_ws/src
+$ git clone https://github.com/guilyx/follow_leader.git
+```
+3. Install dependencies
+```shell
+$ rosdep install follow_leader 
+$ rosdep install --from-paths src --ignore-src -r -y
+```
 
 ## Run
 
-<!--- how to run your app ? -->
+```shell
+$ cd ~/catkin_ws
+$ catkin_make
+$ roslaunch follow_leader follow_leader_auto.launch
+```
 
 ## Roadmap
 
@@ -76,7 +88,7 @@ Contributions are what make the open source community such an amazing place to l
 
 ### Contribute on proposed features
 
-1. Choose any open issue from [here](https://github.com/guilyx/follow_leader/issues). 
+1. Choose any open issue from [here](https://github.com/master-coro/follow_leader/issues). 
 2. Comment on the issue: `Can I work on this?` and get assigned.
 3. Make changes to your `Fork` and send a PR.
 
@@ -115,15 +127,15 @@ Erwin Lejeune - [@spida_rwin](https://twitter.com/spida_rwin) - erwin.lejeune15@
 
 - [Erwin Lejeune](https://github.com/Guilyx)
 
-[contributors-shield]: https://img.shields.io/github/contributors/guilyx/follow_leader.svg?style=flat-square
-[contributors-url]: https://github.com/guilyx/follow_leader/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/guilyx/follow_leader.svg?style=flat-square
-[forks-url]: https://github.com/guilyx/follow_leader/network/members
-[stars-shield]: https://img.shields.io/github/stars/guilyx/follow_leader.svg?style=flat-square
-[stars-url]: https://github.com/guilyx/follow_leader/stargazers
-[issues-shield]: https://img.shields.io/github/issues/guilyx/follow_leader.svg?style=flat-square
-[issues-url]: https://github.com/guilyx/follow_leader/issues
-[license-shield]: https://img.shields.io/github/license/guilyx/follow_leader.svg?style=flat-square
-[license-url]: https://github.com/guilyx/follow_leader/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/master-coro/follow_leader.svg?style=flat-square
+[contributors-url]: https://github.com/master-coro/follow_leader/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/master-coro/follow_leader.svg?style=flat-square
+[forks-url]: https://github.com/master-coro/follow_leader/network/members
+[stars-shield]: https://img.shields.io/github/stars/master-coro/follow_leader.svg?style=flat-square
+[stars-url]: https://github.com/master-coro/follow_leader/stargazers
+[issues-shield]: https://img.shields.io/github/issues/master-coro/follow_leader.svg?style=flat-square
+[issues-url]: https://github.com/master-coro/follow_leader/issues
+[license-shield]: https://img.shields.io/github/license/master-coro/follow_leader.svg?style=flat-square
+[license-url]: https://github.com/master-coro/follow_leader/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/erwinlejeune-lkn
