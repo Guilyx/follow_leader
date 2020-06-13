@@ -38,33 +38,16 @@
 * [Contact](#contact)
 * [Contributors](#contributors)
 
-## About the Project
-
-<!---- what? who? how? what for? for whom? -->
-
-<p align="center">
-    <img src="image/of/the/project" alt="graph" width="800" height="300">
-  </a>
-</p>
-<br />
-<br />
-
-<!---- Could add a more in depth description here -->
-
-<p align="center">
-    <img src="image" alt="Logo" width="800" height="300">
-  </a>
-</p>
-
 ## Setup
 
 1. (Optional) Click on `Fork`
-2. Clone the project on your local machine.
+2. Install ROS (Kinetic or Melodic)
+3. Clone the project on your local machine.
 ```shell
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/guilyx/follow_leader.git
 ```
-3. Install dependencies
+4. Install dependencies
 ```shell
 $ rosdep install follow_leader 
 $ rosdep install --from-paths src --ignore-src -r -y
